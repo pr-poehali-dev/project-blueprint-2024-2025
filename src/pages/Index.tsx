@@ -67,13 +67,35 @@ const Index = () => {
 
             {/* Hero портрет */}
             <div className="lg:col-span-5 flex items-center justify-center">
-              <Card className="aspect-[4/5] w-full max-w-md overflow-hidden rounded-lg">
-                <img
-                  src="https://cdn.poehali.dev/projects/3f081303-8ac0-4223-9545-d31b5d4c70c4/bucket/19326ed7-f54b-41b6-a734-7755308b34fe.jpg"
-                  alt="Мария Манджиева, психолог"
-                  className="w-full h-full object-cover"
-                />
-              </Card>
+              <div className="relative w-full max-w-md">
+                {/* Декоративный фон */}
+                <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-primary/5 blur-2xl" />
+                <div className="absolute -bottom-6 -right-6 w-48 h-48 rounded-full bg-primary/10 blur-xl" />
+                <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-accent/15 blur-xl" />
+
+                {/* Рамка с фото */}
+                <div className="relative rounded-2xl overflow-hidden border-2 border-primary/20 shadow-2xl shadow-primary/10">
+                  {/* Градиент поверх низа фото */}
+                  <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-background/60 to-transparent z-10" />
+                  <img
+                    src="https://cdn.poehali.dev/projects/3f081303-8ac0-4223-9545-d31b5d4c70c4/bucket/19326ed7-f54b-41b6-a734-7755308b34fe.jpg"
+                    alt="Мария Манджиева, психолог"
+                    className="w-full aspect-[4/5] object-cover object-top"
+                  />
+                  {/* Бейдж поверх фото */}
+                  <div className="absolute bottom-6 left-6 z-20">
+                    <div className="bg-background/80 backdrop-blur-sm border border-border rounded-xl px-4 py-3">
+                      <div className="font-bold text-sm">Мария Манджиева</div>
+                      <div className="text-xs text-muted-foreground">Практический психолог · 8+ лет</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Декоративный элемент — листик */}
+                <div className="absolute -top-3 -right-3 w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center border border-primary/30">
+                  <Icon name="Leaf" className="w-5 h-5 text-primary" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
