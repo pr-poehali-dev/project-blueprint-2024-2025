@@ -69,7 +69,7 @@ const Index = () => {
             <div className="lg:col-span-5 flex items-center justify-center">
               <Card className="aspect-[4/5] w-full max-w-md overflow-hidden rounded-lg">
                 <img
-                  src="https://cdn.poehali.dev/projects/3f081303-8ac0-4223-9545-d31b5d4c70c4/bucket/19326ed7-f54b-41b6-a734-7755308b34fe.jpg"
+                  src="https://cdn.poehali.dev/projects/3f081303-8ac0-4223-9545-d31b5d4c70c4/files/630d39e2-9185-42b7-aef6-4f8f1989e285.jpg"
                   alt="Мария Манджиева, психолог"
                   className="w-full h-full object-cover"
                 />
